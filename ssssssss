@@ -1,4 +1,3 @@
--- made by rang#2415 or https://v3rmillion.net/member.php?action=profile&uid=1906262
 local Config = {
     Box               = false,
     BoxOutline        = false,
@@ -10,7 +9,7 @@ local Config = {
     NamesOutline      = false,
     NamesColor        = Color3.fromRGB(255,255,255),
     NamesOutlineColor = Color3.fromRGB(0,0,0),
-    NamesFont         = 3, -- 0,1,2,3
+    NamesFont         = 2, -- 0,1,2,3
     NamesSize         = 13
 }
 
@@ -26,7 +25,7 @@ function CreateEsp(Player)
                 Box.Color = Config.BoxColor
                 Box.Size = Vector2.new(width,height)
                 Box.Position = Vector2.new(Target2dPosition.X - Box.Size.X / 2,Target2dPosition.Y - Box.Size.Y / 2)
-                Box.Thickness = 0.5
+                Box.Thickness = 1
                 Box.ZIndex = 69
                 if Config.BoxOutline then
                     BoxOutline.Visible = IsVisible
@@ -45,7 +44,7 @@ function CreateEsp(Player)
             if Config.Names then
                 Name.Visible = IsVisible
                 Name.Color = Config.NamesColor
-                Name.Text = Player.Name.." "..math.floor((workspace.CurrentCamera.CFrame.p - Player.Character.HumanoidRootPart.Position).magnitude).."m"
+                Name.Text = Player.Name.." "
                 Name.Center = true
                 Name.Outline = Config.NamesOutline
                 Name.OutlineColor = Config.NamesOutlineColor
