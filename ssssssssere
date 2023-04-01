@@ -44,7 +44,7 @@ function CreateEsp(Player)
             if Config.Names then
                 Name.Visible = IsVisible
                 Name.Color = Config.NamesColor
-                Name.Text = Player.Name.." "
+                Name.Text = ""..Player.Name
                 Name.Center = true
                 Name.Outline = Config.NamesOutline
                 Name.OutlineColor = Config.NamesOutlineColor
